@@ -2,7 +2,7 @@
 
 ## ⚠️ Warning
 
-This code is experimental. Use at your own risk.
+This code is highly experimental. It is strongly recommended that you do not use it. Proceed only if you understand the risks involved.
 
 ## Empty trash (daily)
 
