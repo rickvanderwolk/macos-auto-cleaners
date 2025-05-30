@@ -66,7 +66,15 @@ chmod +x "$SCRIPT_PATH"
 
 cat <<EOF > "$WRAPPER_PATH"
 #!/bin/bash
-open -a Terminal "$SCRIPT_PATH"
+osascript <<APPLESCRIPT
+tell application "Terminal"
+    do script "bash '$SCRIPT_PATH'; exit"
+    delay 2
+    try
+        close front window
+    end try
+end tell
+APPLESCRIPT
 EOF
 
 chmod +x "$WRAPPER_PATH"
@@ -105,5 +113,5 @@ launchctl bootstrap gui/$(id -u) "$PLIST"
 echo "✅ Installed LaunchAgent to empty Trash every minute."
 echo "🛡️  Make sure Terminal has Full Disk Access:"
 echo "   System Settings → Privacy & Security → Full Disk Access → Add Terminal"
-echo "🚀 Running first cleanup manually via Terminal..."
+echo "🚀 Running first cleanup via Terminal..."
 open -a Terminal "$SCRIPT_PATH"
