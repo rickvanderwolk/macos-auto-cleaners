@@ -1,4 +1,4 @@
-# macos-auto-cleaners
+# macOS auto cleaners
 
 ## ⚠️ Warning
 
