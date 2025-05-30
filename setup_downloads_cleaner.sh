@@ -23,10 +23,11 @@ cat <<EOF > "$WRAPPER_PATH"
 #!/bin/bash
 osascript <<APPLESCRIPT
 tell application "Terminal"
-    do script "bash '$SCRIPT_PATH'; exit"
-    delay 2
+    activate
+    set myWindow to do script "bash '$SCRIPT_PATH'; exit"
+    delay 4
     try
-        close front window
+        if (count of windows) > 0 then close window 1
     end try
 end tell
 APPLESCRIPT
@@ -69,4 +70,4 @@ echo "✅ Installed LaunchAgent for cleaning Downloads folder (daily)."
 echo "🛡️  Make sure Terminal has Full Disk Access:"
 echo "   System Settings → Privacy & Security → Full Disk Access → Add Terminal"
 echo "🚀 Running first cleanup via Terminal..."
-open -a Terminal "$SCRIPT_PATH"
+"$WRAPPER_PATH"
