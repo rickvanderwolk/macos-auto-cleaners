@@ -10,7 +10,7 @@ This code is experimental. Use at your own risk.
 bash <(curl -s https://raw.githubusercontent.com/rickvanderwolk/macos-auto-cleaners/main/setup_trash_cleaner.sh)
 ```
 
-## Remove downloads older than 7 days
+## Remove downloads older than 7 days (daily)
 ```
 bash <(curl -s https://raw.githubusercontent.com/rickvanderwolk/macos-auto-cleaners/main/setup_downloads_cleaner.sh)
 ```
