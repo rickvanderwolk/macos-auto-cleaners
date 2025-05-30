@@ -4,7 +4,7 @@
 
 This code is experimental. Use at your own risk.
 
-## Empty trash daily
+## Empty trash (daily)
 
 install
 ```
