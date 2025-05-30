@@ -49,7 +49,7 @@ cat <<EOF > "$PLIST"
     </array>
 
     <key>StartInterval</key>
-    <integer>60</integer>
+    <integer>86400</integer>
 
     <key>RunAtLoad</key>
     <true/>
